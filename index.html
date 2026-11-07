@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>■●▼のホームページ</title>
+</head>
+<body style="text-align: center;">
+    <h1>■●▼のホームページへようこそ！</h1>
+    <img src="neko.gif" alt="猫のイラスト">
+    <hr>
+    <h2>自己紹介</h2>
+    <p>
+    好きなこと: くうねるあそぶ<br>
+    行きたいところ: 東京スカイツリー
+    </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.8279812419978!2d139.80952805501713!3d35.710082907157414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ed0d12f9adf%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1794033689437!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <hr>
+    <h2>リンクと動画</h2>
+    <p>
+    <a href="https://www.google.com/" target="_self">Google</a><br>
+    <a href="https://www.yahoo.co.jp/" target="_self">Yahoo! JAPAN</a>
+    </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vnoK5dIvv8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ueJcRmfweSM?si=794YJ9fVMG-yEDYG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+    <h2>気分転換にどうぞ～～</h2>
+    <button type="button" onclick="omikuji()" style="font-size:20px;">おみくじを引く</button>
+    <script>
+    function omikuji() {
+        var message = "";
+        // 以下の2つの★★★★★★★★★★★★★の間の部分は、今後の授業でデスクトップアプリケーションに使います。
+        // ★★★★★★★★★★★★★
+        var fortuneValue;
+        // Math.random()で0以上1未満の乱数を取得します。
+        // 100倍して1を加えてから小数点以下を切り捨てると、
+        // 1以上100以下の整数になります。
+        fortuneValue = Math.floor(Math.random() * 100) + 1;
+        // メッセージの中で改行したいときは「\n」を指定します。
+        message = "今日のあなたの運勢は " + fortuneValue + " 点\n\n";
+        if (fortuneValue >= 80) {
+            message += "やったね！　おめでとう！　大吉です！！";
+        } else if (fortuneValue >= 60) {
+            message += "今日は何かいいことあるかも。中吉です！";
+        } else if (fortuneValue >= 40) {
+            message += "悪くないっすよ～。小吉です。";
+        } else if (fortuneValue >= 20) {
+            message += "こんなこともたまには…。凶です。";
+        } else {
+            message += "がびーん！　大凶です(T_T)。気を落とさないで…。";
+        }
+        // ★★★★★★★★★★★★★
+        alert(message);
+    }
+    </script>
+</body>
+</html>
